@@ -1,0 +1,20 @@
+const {Sequelize} = require("sequelize");
+require("dotenv").config();
+
+let sequelize = new Sequelize(process.env.MYSQL_URI);
+
+// sequelize.authenticate().then(()=>{
+//     console.log('conncted to db')
+// }).catch((err) =>{
+//     console.log(err)
+// })
+// OR  to authenticate the connection
+// let connection = async() =>{
+//     try {
+//         await sequelize.authenticate()
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+//  connection()
+module.exports = sequelize
